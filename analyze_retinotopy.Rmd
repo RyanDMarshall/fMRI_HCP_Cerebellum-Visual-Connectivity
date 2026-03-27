@@ -1,0 +1,424 @@
+---
+title: "retinotopic_cerebellum.Rmd"
+author: "Ryan Marshall"
+date: '2023-05-10'
+output:
+  word_document: default
+  pdf_document:
+    latex_engine: pdflatex
+    includes:
+      in_header: iftex.sty
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+
+work_dir <- "/projectnb/somerslab/ryanmars/projects/CrossTaskAnalysis/proj_allrest/results/group/HCP_SUIT"
+setwd(work_dir) 
+
+# define streams
+streams <- list(
+  dorsal = c("V1d", "V2d", "V3d", "V3A", "V3B", "IPS0", "IPS1", "IPS2", "IPS3", "IPS4", "IPS5", "SPL1", "FEF"),
+  ventral = c("V1v", "V2v", "V3v", "hV4", "VO1", "VO2", "PHC1", "PHC2"),
+  lateral = c("LO1", "LO2", "TO1", "TO2")
+)
+
+streams_big <- list(
+  early_dorsal = c("V1d","V2d","V3d"),
+  mid_dorsal = c("V3A","V3B","IPS0","IPS1","IPS2"),
+  late_dorsal = c("IPS3","IPS4","FEF"),
+  early_lateral = c("LO1","LO2"),
+  late_lateral = c("TO1","TO2"),
+  early_ventral = c("V1v", "V2v", "V3v"),
+  mid_ventral = c("hV4","VO1","VO2"),
+  late_ventral = c("PHC1","PHC2")
+)
+
+# Define the color palette
+dorsal_palette <- c("#00BFC4", "#00939C", "#007377")
+ventral_palette <- c("#F8766D", "#C43C35", "#7F0000")
+lateral_palette <- c("#FFB85F", "#D46F00")
+color_palette_full <- c(dorsal_palette, ventral_palette, lateral_palette)
+color_palette_small <- c("#00BFC4", "#F8766D", "#FFB85F")
+color_palette_by_roi <- c("#00CED1", "#00BFC4", "#00A5AA", "#00939C", "#00878B", "#007377", "#006E72", "#005A5F", "#005A5F", "#004749", "#003535", "#FF7258", "#F8766D", "#E64C46", "#C43C35", "#BF1D19", "#8F0000", "#7F0000", "#5F0000", "#FFB85F", "#FF944C", "#D46F00", "#D46F00")
+
+## Load data
+df <- as.data.frame(read.csv("retinotopic_tstats_full.csv"))
+rois <- as.list(unique(df$roi))
+nsub = 166; dof = nsub - 2;
+
+rois_reorder <- c("V1d", "V2d", "V3d", "V3A", "V3B", 
+                  "IPS0", "IPS1", "IPS2", "IPS3", 
+                  "IPS4", "IPS5", "SPL1", "FEF", 
+                  "V1v", "V2v", "V3v", "hV4", 
+                  "VO1", "VO2", "PHC1", "PHC2", 
+                  "LO1", "LO2", "TO1", "TO2")
+rois_reorder <- rois_reorder[rois_reorder!=c("IPS5", "SPL1")]
+
+df <- df %>% filter(cb_idx != 0 & roi %in% rois_reorder) %>%
+  mutate(stream = case_when(
+    roi %in% streams$dorsal ~ "dorsal",
+    roi %in% streams$ventral ~ "ventral",
+    roi %in% streams$lateral ~ "lateral"
+  )) %>% 
+  mutate(stream = factor(stream, levels = c("dorsal", "ventral", "lateral"))) %>% 
+  mutate(stream_depth = case_when(
+    roi %in% streams_big$early_dorsal ~ "early_dorsal",
+    roi %in% streams_big$mid_dorsal ~ "mid_dorsal",
+    roi %in% streams_big$late_dorsal ~ "late_dorsal",
+    roi %in% streams_big$early_lateral ~ "early_lateral",
+    roi %in% streams_big$late_lateral ~ "late_lateral",
+    roi %in% streams_big$early_ventral ~ "early_ventral",
+    roi %in% streams_big$mid_ventral ~ "mid_ventral",
+    roi %in% streams_big$late_ventral ~ "late_ventral"
+  )) %>%
+  mutate(stream_depth = factor(stream_depth, levels = c("early_dorsal", "mid_dorsal", "late_dorsal", "early_ventral", "mid_ventral", "late_ventral","early_lateral","late_lateral")))
+  
+cb_roi_full_map <- list("R_lat_VIIIb/IX","R_med_VIIIb/IX","L_med_VIIIb/IX","L_lat_VIIIb/IX","L_VIIb/VIIIa","R_VIIb/VIIIa","L_med_OMV","L_lat_OMV","R_med_OMV","R_lat_OMV" )
+
+cb_roi_full_reorder <- list("L_lat_VIIIb/IX","L_med_VIIIb/IX","L_VIIb/VIIIa","L_lat_OMV","L_med_OMV","R_med_OMV","R_lat_OMV","R_VIIb/VIIIa","R_med_VIIIb/IX","R_lat_VIIIb/IX" )
+cb_roi_full_reorder_RL <- list("L_med_OMV","R_med_OMV","L_lat_OMV","R_lat_OMV","L_VIIb/VIIIa","R_VIIb/VIIIa","L_med_VIIIb/IX","R_med_VIIIb/IX","L_lat_VIIIb/IX","R_lat_VIIIb/IX" )
+cb_roi_full_reorder_bh <- list("med_OMV","lat_OMV","VIIb/VIIIa","med_VIIIb/IX","lat_VIIIb/IX")
+
+# define mapping for cb_roi and cb_hemi
+cb_roi_map <- c("lat_VIIIb/IX","med_VIIIb/IX","med_VIIIb/IX","lat_VIIIb/IX","VIIb/VIIIa","VIIb/VIIIa","med_OMV","lat_OMV","med_OMV","lat_OMV")
+cb_hemi_map <- c("R","R","L", "L", "L", "R", "L", "L", "R", "R")
+
+df$cb_roi_full <- cb_roi_full_map[df$cb_idx]
+df$cb_roi <- cb_roi_map[df$cb_idx]
+df$cb_hemi <- cb_hemi_map[df$cb_idx]
+
+bh_pear_df <- df %>% filter(hemi == "bilat" & corrtype == "pearson")
+lh_pear_df <- df %>% filter(hemi == "lh" & corrtype == "pearson")
+rh_pear_df <- df %>% filter(hemi == "rh" & corrtype == "pearson")
+
+lh_part_df <- df %>% filter(hemi == "lh" & corrtype == "partial")
+rh_part_df <- df %>% filter(hemi == "rh" & corrtype == "partial")
+
+```
+
+# Create t boxplots for each ROI averaged across cb_roi and grouped by stream_depth
+
+```{r}
+bh_pear_df %>%
+  group_by(roi, stream_depth) %>%
+# Plot data
+  ggplot(aes(x = factor(roi, levels = rois_reorder), y = t, fill= stream_depth), fill = stream_depth) +
+  geom_boxplot() +
+  facet_grid(scales = "fixed") +
+  scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
+  labs(title = paste0("bilat pearson t values across retinotopic cerebellar seeds"),
+       x = "ROI",
+       y = "T value") +
+  scale_fill_manual(values=color_palette_full)
+
+# Create t boxplots for each bilateral cerebellar retinotopic seeds, also grouped by stream_depth
+bh_pear_df %>%
+  group_by(roi, stream_depth) %>%
+  # Plot data
+  ggplot(aes(x = factor(cb_roi, levels = cb_roi_full_reorder_bh), y = t, fill = stream_depth)) +
+  geom_boxplot() +
+  facet_grid(scales = "fixed") +
+  scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
+  labs(title = paste0("bilat pearson t values across retinotopic cerebellar seeds"),
+       x = "ROI",
+       y = "T value") +
+  scale_fill_manual(values=color_palette_full)
+  
+# Create same boxplots but converted to correlation values from t statistic
+bh_pear_df %>%
+  mutate(r = sqrt(t^2 / (t^2 + dof))) %>%
+  group_by(roi, stream_depth) %>%
+# Plot data
+  ggplot(aes(x = factor(roi, levels = rois_reorder), y = r, fill= stream_depth), fill = stream_depth) +
+  geom_boxplot() +
+  facet_grid(scales = "fixed") +
+  scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
+  scale_y_continuous(limits = c(0,1), breaks = seq(0,1,.1)) + 
+  labs(title = paste0("bilat pearson r values across retinotopic cerebellum by cortical ROI"),
+       x = "ROI",
+       y = "Effect size r") +
+  scale_fill_manual(values=color_palette_full)
+
+# Filter and group data
+bh_pear_df %>%
+  mutate(r = sqrt(t^2 / (t^2 + dof))) %>%
+  group_by(roi, stream_depth) %>%
+  # Plot data
+  ggplot(aes(x = factor(cb_roi, levels = cb_roi_full_reorder_bh), y = r, fill = stream_depth)) +
+  geom_boxplot() +
+  facet_grid(scales = "fixed") +
+  scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
+  scale_y_continuous(limits = c(0,1), breaks = seq(0,1,.1)) + 
+  labs(title = paste0("bilat pearson r values by retinotopic cerebellar ROI"),
+       x = "ROI",
+       y = "Effect size (r)") +
+  scale_fill_manual(values=color_palette_full)
+
+```
+
+
+```{r}
+library(apaTables)
+#source("apaDvalueTable2.R")
+bh_pear_df_orig <- bh_pear_df
+```
+
+```{r}
+#bh_pear_df_orig <- bh_pear_df
+bh_pear_df <- bh_pear_df_orig
+
+bh_pear_df <- bh_pear_df %>% 
+  mutate(stream=case_match(stream,"dorsal"~"Dorsal", "ventral"~"Ventral", "lateral"~"Lateral")) %>%
+  mutate(stream_depth=case_match(stream_depth,"early_dorsal"~"Early Dorsal", "mid_dorsal"~"Mid-Dorsal", "late_dorsal"~"Late Dorsal", "early_ventral"~"Early Ventral", "mid_ventral"~"Mid-Ventral", "late_ventral"~"Late Ventral", "early_lateral"~"Early Lateral", "late_lateral"~"Late Lateral")) %>%
+  mutate(cb_roi=case_match(cb_roi, "lat_VIIIb/IX"~"Lateral VIIIb/IX","med_VIIIb/IX"~"Medial VIIIb/IX", "med_OMV"~"Medial OMV", "VIIb/VIIIa"~"VIIb/VIIIa", "lat_OMV"~"Lateral OMV"))
+
+#bh_pear_df %>% mutate(cb_roi_full=as.factor(cb_roi_full))
+bh_pear_df <- bh_pear_df %>% 
+  rename(ROI=roi, Stream=stream, CTX_Depth=stream_depth, CB_ROI=cb_roi) %>% 
+  mutate(PAIR=sprintf('%s X %s',CB_ROI,CTX_Depth))
+  
+```
+
+```{r}
+## Custom APA Table Setup - Rewrote apa.d.table to accept unequal variances
+source("apaDvalueTable2.R")
+#report(aov_ld_vs_lv)
+
+apa <- asNamespace("apaTables")
+ls(apa, all.names = TRUE)   # see all objects, including hidden ones
+is.valid.name <- get("is.valid.name", envir = apa)  # view the source of the helper
+RtfTable <- get("RtfTable", envir = apa)
+write.rtf.table <- get("write.rtf.table", envir = apa)
+```
+
+## DORSAL VS VENTRAL CONTRASTS
+```{r}
+# RETINOTOPY BY STREAM ANALYSIS - LATE DORSAL VS LATE VENTRAL
+tmp_df <- bh_pear_df %>% filter(CTX_Depth %in% c("Late Dorsal", "Late Ventral")) 
+
+aov_ld_vs_lv <- aov(t ~ CTX_Depth*CB_ROI, data=tmp_df)
+summary(aov_ld_vs_lv)
+#TukeyHSD(aov_ld_vs_lv)
+
+apa.2way.table(iv1=CTX_Depth, iv2=CB_ROI, dv=t, data=tmp_df, filename='AOV_2way_LateDorsal_vs_LateVentral_Descriptives.doc', table.number = 1)
+apa.aov.table(aov_ld_vs_lv, filename='AOV_2way_LateDorsal_vs_LateVentral_Test.doc', type=2, table.number = 2)
+apa.d.table2(iv=PAIR,dv=t,data=tmp_df,filename='AOV_2way_LateDorsal_vs_LateVentral_Posthoc.doc', table.number = 3)
+```
+
+```{r}
+# RETINOTOPY BY STREAM ANALYSIS - MID DORSAL VS MID VENTRAL
+tmp_df <- bh_pear_df %>% filter(CTX_Depth %in% c("Mid-Dorsal", "Mid-Ventral"))
+aov_md_vs_mv <- aov(t ~ CTX_Depth*CB_ROI, tmp_df)
+#summary(aov_md_vs_mv)
+#TukeyHSD(aov_md_vs_mv)
+
+apa.2way.table(iv1=CTX_Depth, iv2=CB_ROI, dv=t, data=tmp_df, filename='AOV_2way_MidDorsal_vs_MidVentral_Descriptives.doc', table.number = 4)
+apa.aov.table(aov_md_vs_mv, filename='AOV_2way_MidDorsal_vs_MidVentral_Test.doc', type=2, table.number = 5)
+apa.d.table2(iv=PAIR,dv=t,data=tmp_df,filename='AOV_2way_MidDorsal_vs_MidVentral_Posthoc.doc', table.number = 6)
+```
+
+```{r}
+# RETINOTOPY BY STREAM ANALYSIS - EARLY DORSAL VS EARLY VENTRAL
+tmp_df <- bh_pear_df %>% filter(CTX_Depth %in% c("Early Dorsal", "Early Ventral"))
+aov_ed_vs_ev <- aov(t ~ CTX_Depth*CB_ROI, tmp_df)
+#summary(aov_ed_vs_ev)
+#TukeyHSD(aov_ed_vs_ev)
+
+apa.2way.table(iv1=CTX_Depth, iv2=CB_ROI, dv=t, data=tmp_df, filename='AOV_2way_EarlyDorsal_vs_EarlyVentral_Descriptives.doc', table.number = 7)
+apa.aov.table(aov_ed_vs_ev, filename='AOV_2way_EarlyDorsal_vs_EarlyVentral_Test.doc', type=2, table.number = 8)
+apa.d.table2(iv=PAIR,dv=t,data=tmp_df,filename='AOV_2way_EarlyDorsal_vs_EarlyVentral_Posthoc.doc', table.number = 9)
+```
+
+## WITHIN-STREAM CONTRASTS
+```{r}
+# RETINOTOPY BY STREAM ANALYSIS - EARLY DORSAL VS EARLY VENTRAL
+tmp_df <- bh_pear_df %>% filter(CTX_Depth %in% c("Early Dorsal", "Late Dorsal"))
+aov_ld_vs_ed <- aov(t ~ CTX_Depth*CB_ROI, tmp_df)
+summary(aov_ld_vs_ed)
+TukeyHSD(aov_ld_vs_ed)
+
+apa.2way.table(iv1=CTX_Depth, iv2=CB_ROI, dv=t, data=tmp_df, filename='AOV_2way_LateDorsal_vs_EarlyDorsal_Descriptives.doc', table.number = 10)
+apa.aov.table(aov_ld_vs_ed, filename='AOV_2way_LateDorsal_vs_EarlyDorsal_Test.doc', type=2, table.number = 11)
+apa.d.table2(iv=PAIR,dv=t,data=tmp_df,filename='AOV_2way_LateDorsal_vs_EarlyDorsal_Posthoc.doc', table.number = 12)
+```
+
+```{r}
+# RETINOTOPY BY STREAM ANALYSIS - EARLY LATERAL VS LATE LATERAL
+tmp_df <- bh_pear_df %>% filter(CTX_Depth %in% c("Early Lateral", "Late Lateral"))
+aov_ll_vs_el <- aov(t ~ CTX_Depth*CB_ROI, tmp_df)
+#summary(aov_ll_vs_el)
+#TukeyHSD(aov_ll_vs_el)
+
+apa.2way.table(iv1=CTX_Depth, iv2=CB_ROI, dv=t, data=tmp_df, filename='AOV_2way_LateLateral_vs_EarlyLateral_Descriptives.doc', table.number = 13)
+apa.aov.table(aov_ll_vs_el, filename='AOV_2way_LateLateral_vs_EarlyLateral_Test.doc', type=2, table.number = 14)
+apa.d.table2(iv=PAIR,dv=t,data=tmp_df,filename='AOV_2way_LateLateral_vs_EarlyLateral_Posthoc.doc', table.number = 15)
+
+```
+```{r}
+# RETINOTOPY BY STREAM ANALYSIS - EARLY VENTRAL VS LATE VENTRAL
+tmp_df <- bh_pear_df %>% filter(CTX_Depth %in% c("Early Ventral", "Late Ventral"))
+aov_lv_vs_ev <- aov(t ~ CTX_Depth*CB_ROI, tmp_df)
+#summary(aov_lv_vs_ev)
+#TukeyHSD(aov_lv_vs_ev)
+
+apa.2way.table(iv1=CTX_Depth, iv2=CB_ROI, dv=t, data=tmp_df, filename='AOV_2way_LateVentral_vs_EarlyVentral_Descriptives.doc', table.number = 16)
+apa.aov.table(aov_lv_vs_ev, filename='AOV_2way_LateVentral_vs_EarlyVentral_Test.doc', type=2, table.number = 17)
+apa.d.table2(iv=PAIR,dv=t,data=tmp_df,filename='AOV_2way_LateVentral_vs_EarlyVentral_Posthoc.doc', table.number = 18)
+
+```
+
+## LATERALIZATION CONTRASTS
+# LATERALIZATION ANALYSIS SETUP
+```{r}
+df_cb_lh <- df %>% filter(corrtype=="pearson", cb_hemi=="L") %>% group_by(roi,cb_roi) %>% mutate(roi = factor(roi, levels = rois_reorder))
+df_cb_rh <- df %>% filter(corrtype=="pearson", cb_hemi=="R") %>% group_by(roi,cb_roi) %>% mutate(roi = factor(roi, levels = rois_reorder))
+df_ctx_lh <- df %>% filter(corrtype=="pearson", hemi=="lh") %>% group_by(roi) %>% mutate(roi = factor(roi, levels = rois_reorder))
+df_ctx_rh <- df %>% filter(corrtype=="pearson", hemi=="rh") %>% group_by(roi) %>% mutate(roi = factor(roi, levels = rois_reorder))
+
+df_cb_lh_ipsi <- df_cb_lh %>% filter(hemi == "lh")
+df_cb_rh_ipsi <- df_cb_rh %>% filter(hemi == "rh")
+df_cb_lh_contra <- df_cb_lh %>% filter(hemi == "rh")
+df_cb_rh_contra <- df_cb_rh %>% filter(hemi == "lh")
+
+df_ctx_lh_ipsi <- df_ctx_lh %>% filter(cb_hemi=="L")
+df_ctx_rh_ipsi <- df_ctx_rh %>% filter(cb_hemi=="R")
+df_ctx_lh_contra <- df_ctx_lh %>% filter(cb_hemi=="R")
+df_ctx_rh_contra <- df_ctx_rh %>% filter(cb_hemi=="L")
+
+df_ctx_lh_ipsi_sum <- df_ctx_lh_ipsi %>% group_by(stream,roi) %>% summarize(ctx_lh_ipsi_t = mean(t), ctx_lh_ipsi_r = mean(t) / sqrt(mean(t)^2 + dof))
+df_ctx_rh_ipsi_sum <- df_ctx_rh_ipsi %>% group_by(stream,roi) %>% summarize(ctx_rh_ipsi_t = mean(t), ctx_rh_ipsi_r = mean(t) / sqrt(mean(t)^2 + dof))
+df_ctx_lh_contra_sum <- df_ctx_lh_contra %>% group_by(stream,roi) %>% summarize(ctx_lh_contra_t = mean(t), ctx_lh_contra_r = mean(t) / sqrt(mean(t)^2 + dof))
+df_ctx_rh_contra_sum <- df_ctx_rh_contra %>% group_by(stream,roi) %>% summarize(ctx_rh_contra_t = mean(t), ctx_rh_contra_r = mean(t) / sqrt(mean(t)^2 + dof))
+
+df_cb_lh_ipsi_sum <- df_cb_lh_ipsi %>% group_by(roi,cb_roi) %>% summarize(cb_lh_ipsi_t = mean(t), cb_lh_ipsi_r = mean(t) / sqrt(mean(t)^2 + dof))
+df_cb_rh_ipsi_sum <- df_cb_rh_ipsi %>% group_by(roi,cb_roi) %>% summarize(cb_rh_ipsi_t = mean(t), cb_rh_ipsi_r = mean(t) / sqrt(mean(t)^2 + dof))
+df_cb_lh_contra_sum <- df_cb_lh_contra %>% group_by(roi,cb_roi) %>% summarize(cb_lh_contra_t = mean(t), cb_lh_contra_r = mean(t) / sqrt(mean(t)^2 + dof))
+df_cb_rh_contra_sum <- df_cb_rh_contra %>% group_by(roi,cb_roi) %>% summarize(cb_rh_contra_t = mean(t), cb_rh_contra_r = mean(t) / sqrt(mean(t)^2 + dof))
+
+df_cb_lh_ipsi_stream <- df_cb_lh_ipsi %>% group_by(stream,cb_roi) %>% mutate(cb_lh_ipsi_t = t) %>% mutate(cb_lh_ipsi_r = cb_lh_ipsi_t / sqrt(cb_lh_ipsi_t^2 + dof))
+df_cb_rh_ipsi_stream <- df_cb_rh_ipsi %>% group_by(stream,cb_roi) %>% mutate(cb_rh_ipsi_t = t) %>% mutate(cb_rh_ipsi_r = cb_rh_ipsi_t / sqrt(cb_rh_ipsi_t^2 + dof))
+df_cb_lh_contra_stream <- df_cb_lh_contra %>% group_by(stream,cb_roi) %>% mutate(cb_lh_contra_t = t) %>% mutate(cb_lh_contra_r = cb_lh_contra_t / sqrt(cb_lh_contra_t^2 + dof))
+df_cb_rh_contra_stream <- df_cb_rh_contra %>% group_by(stream,cb_roi) %>% mutate(cb_rh_contra_t = t) %>% mutate(cb_rh_contra_r = cb_rh_contra_t / sqrt(cb_rh_contra_t^2 + dof))
+
+ctx_df <- full_join(full_join(df_ctx_lh_ipsi_sum,df_ctx_rh_ipsi_sum),full_join(df_ctx_lh_contra_sum,df_ctx_rh_contra_sum))
+cb_df <- full_join(full_join(df_cb_lh_ipsi_sum,df_cb_rh_ipsi_sum),full_join(df_cb_lh_contra_sum,df_cb_rh_contra_sum))
+
+by_list <- c("roi","corrtype","nvoxels","vol_idx","stream","stream_depth","cb_roi")
+cb_stream_lh_df <- left_join(df_cb_lh_ipsi_stream, df_cb_lh_contra_stream, by = by_list)
+cb_stream_rh_df <- left_join(df_cb_rh_ipsi_stream, df_cb_rh_contra_stream, by = by_list)
+
+by_list <- c("roi","corrtype","vol_idx","stream","stream_depth","cb_roi")
+cb_stream_df <- left_join(cb_stream_lh_df,cb_stream_rh_df,by = by_list)
+
+# Sum percent variance explained through ipsilateral connectivity vs through contralateral connectivity
+cb_stream_df <- cb_stream_df %>% group_by(cb_roi) %>% mutate(R2ipsi = sqrt((cb_lh_ipsi_r^2 + cb_rh_ipsi_r^2))) %>% mutate(R2contra = sqrt((cb_lh_contra_r^2 + cb_rh_contra_r^2))) %>% mutate(R2diff = R2contra - R2ipsi)
+
+boxplot(R2diff ~ stream, data = cb_stream_df)
+```
+
+## LATERALIZATION VISUALIZATION BY CORTICAL ROI
+```{r}
+ctx_df %>% ggplot() +
+  geom_point(aes(x = ((ctx_lh_ipsi_r+ctx_rh_ipsi_r)/2), y = ((ctx_lh_contra_r+ctx_rh_contra_r)/2), color = roi), size = 3, stroke = 1) +
+  scale_color_manual(values = color_palette_by_roi) +
+  xlim(.25,.65) + ylim(.25,.65) +
+  labs(x = "partial r with ipsilateral retinotopic cerebellum",
+       y = "partial r with contrateral retinotopic cerebellum",
+ title = "Functional asymmetries from visual cortex") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dotted")
+
+ctx_df %>% ggplot() +
+  geom_point(aes(x = ctx_lh_ipsi_r, y = ctx_lh_contra_r, color = roi), size = 3, stroke = 1) +
+  scale_color_manual(values = color_palette_by_roi) +
+  xlim(.25,.65) + ylim(.25,.65) +
+  labs(x = "partial r with ipsilateral retinotopic cerebellum",
+       y = "partial r with contrateral retinotopic cerebellum",
+   title = "Functional asymmetries from left visual cortex") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dotted")
+
+ctx_df %>% ggplot() +
+  geom_point(aes(x = ctx_rh_ipsi_r, y = ctx_rh_contra_r, color = roi), size = 3, stroke = 1) +
+  scale_color_manual(values = color_palette_by_roi) +
+  xlim(.25,.65) + ylim(.25,.65) +
+  labs(x = "partial r with ipsilateral retinotopic cerebellum",
+       y = "partial r with contrateral retinotopic cerebellum",
+ title = "Functional asymmetries from right visual cortex") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dotted")
+``` 
+
+## LATERALIZATION VISUALIZATION BY CEREBELLAR ROI
+```{r}
+cb_df %>% filter(cb_roi == "med_OMV") %>% ggplot() +
+  geom_point(aes(x = ((cb_lh_ipsi_r+cb_rh_ipsi_r)/2), y = ((cb_lh_contra_r+cb_rh_contra_r)/2), color = roi), size = 3, stroke = 1) +
+  scale_color_manual(values = color_palette_by_roi) +
+  xlim(.25,.65) + ylim(.25,.65) +
+  labs(x = "average partial r with ipsilateral visual cortex",
+       y = "average partial r with contrateral visual cortex",
+   title = "Asymmetry of cerebellar medial OMV") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dotted")
+
+cb_df %>% filter(cb_roi == "lat_OMV") %>% ggplot() +
+  geom_point(aes(x = ((cb_lh_ipsi_r+cb_rh_ipsi_r)/2), y = ((cb_lh_contra_r+cb_rh_contra_r)/2), color = roi), size = 3, stroke = 1) +
+  scale_color_manual(values = color_palette_by_roi) +
+  xlim(.25,.65) + ylim(.25,.65) +
+  labs(x = "average partial r with ipsilateral visual cortex",
+       y = "average partial r with contrateral visual cortex",
+   title = "Asymmetry of cerebellar lateral OMV") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dotted")
+  
+cb_df %>% filter(cb_roi == "VIIb/VIIIa") %>% ggplot() +
+  geom_point(aes(x = ((cb_lh_ipsi_r+cb_rh_ipsi_r)/2), y = ((cb_lh_contra_r+cb_rh_contra_r)/2), color = roi), size = 3, stroke = 1) +
+  scale_color_manual(values = color_palette_by_roi) +
+  xlim(.25,.65) + ylim(.25,.65) +
+  labs(x = "average partial r with ipsilateral visual cortex",
+       y = "average partial r with contrateral visual cortex",
+   title = "Asymmetry of cerebellar VIIb/VIIIa") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dotted")
+
+cb_df %>% filter(cb_roi == "med_VIIIb/IX") %>% ggplot() +
+  geom_point(aes(x = ((cb_lh_ipsi_r+cb_rh_ipsi_r)/2), y = ((cb_lh_contra_r+cb_rh_contra_r)/2), color = roi), size = 3, stroke = 1) +
+  scale_color_manual(values = color_palette_by_roi) +
+  xlim(.25,.65) + ylim(.25,.65) +
+  labs(x = "average partial r with ipsilateral visual cortex",
+       y = "average partial r with contrateral visual cortex",
+   title = "Asymmetry of cerebellar medial VIIIb/IX") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dotted")
+  
+cb_df %>% filter(cb_roi == "lat_VIIIb/IX") %>% ggplot() +
+  geom_point(aes(x = ((cb_lh_ipsi_r+cb_rh_ipsi_r)/2), y = ((cb_lh_contra_r+cb_rh_contra_r)/2), color = roi), size = 3, stroke = 1) +
+  scale_color_manual(values = color_palette_by_roi) +
+  xlim(.25,.65) + ylim(.25,.65) +
+  labs(x = "average partial r with ipsilateral visual cortex",
+       y = "average partial r with contrateral visual cortex",
+   title = "Asymmetry of retinotopic cerebellar lateral VIIIb/IX") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dotted")
+```
+
+```{r}
+cb_stream_df_orig <- cb_stream_df
+
+cb_stream_df <- cb_stream_df %>% 
+  rename(ROI=roi, Stream=stream, CTX_Depth=stream_depth, CB_ROI=cb_roi) %>% 
+  mutate(PAIR=sprintf('%s X %s',CB_ROI,CTX_Depth))
+```
+
+```{r}
+## LATERALIZATION ANALYSIS
+# Paired t test reveals no significant difference in global contralateral vs ipsilateral connectivity
+contra_vs_ipsi_t <- t.test(cb_stream_df$R2contra, cb_stream_df$R2ipsi, paired=TRUE)
+#report(contra_vs_ipsi_t)
+
+# Two-way ANOVA shows sig main effect of stream, sig main effect of cerebellar retinotopic ROI, and significant interaction
+aov_lateralized <- aov(R2diff ~ Stream*CB_ROI,data=cb_stream_df)
+summary(aov_lateralized)
+
+apa.2way.table(iv1=CTX_Depth, iv2=CB_ROI, dv=R2diff, data=cb_stream_df, filename='AOV_2way_R2diff_Descriptives.doc', table.number = 19)
+apa.aov.table(aov_lateralized, filename='AOV_2way_R2diff_Test.doc', type=2, table.number = 20)
+apa.d.table2(iv=PAIR,dv=t,data=tmp_df,filename='AOV_2way_R2diff_Posthoc.doc', table.number = 21)
+
+#TukeyHSD(aov_lateralized)
+```
+  

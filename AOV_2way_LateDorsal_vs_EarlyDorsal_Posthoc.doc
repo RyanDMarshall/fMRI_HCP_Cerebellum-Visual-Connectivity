@@ -1,0 +1,912 @@
+{\rtf1\ansi\deff0 {\fonttbl {\f0 Times New Roman;}}
+\paperw15840 \paperh12240 \margl1440 \margr1440 \margt1440 \margb1440 \landscape 
+{\pard Table 12 \par}
+{\pard  \par}
+{\pard\i Means, Standard Deviations, and d-values with Confidence Intervals\par}
+{\pard  \par}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx1800 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx3024 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx4248 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5688 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx7128 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx8568 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx10008 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx11448 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx12888 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx14328 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx15768 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{Variable}\cell
+\pard\sa0\sb0\intbl\qc{{\i M}}\cell
+\pard\sa0\sb0\intbl\qc{{\i SD}}\cell
+\pard\sa0\sb0\intbl\qc{1}\cell
+\pard\sa0\sb0\intbl\qc{2}\cell
+\pard\sa0\sb0\intbl\qc{3}\cell
+\pard\sa0\sb0\intbl\qc{4}\cell
+\pard\sa0\sb0\intbl\qc{5}\cell
+\pard\sa0\sb0\intbl\qc{6}\cell
+\pard\sa0\sb0\intbl\qc{7}\cell
+\pard\sa0\sb0\intbl\qc{8}\cell
+\pard\sa0\sb0\intbl\qc{9}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx1800 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx3024 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx4248 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5688 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx7128 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx8568 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx10008 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx11448 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx12888 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx14328 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx15768 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{1. Lateral OMV X Early Dorsal}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{8.43}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{2.03}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{2. Lateral OMV X Late Dorsal}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{9.25}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{1.84}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.42}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.27, 0.58]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{3. Lateral VIIIb/IX X Early Dorsal}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{9.74}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{3.91}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.38}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.14}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.25, 0.51]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.01, 0.27]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{4. Lateral VIIIb/IX X Late Dorsal}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{9.51}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{4.22}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.29}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.07}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.06}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.16, 0.43]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[-0.06, 0.20]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[-0.05, 0.16]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{5. Medial OMV X Early Dorsal}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{10.27}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{2.52}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.84}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.49}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.14}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.19}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.63, 1.04]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.29, 0.69]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[-0.03, 0.32]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.01, 0.37]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{6. Medial OMV X Late Dorsal}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{10.30}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{2.24}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.89}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.53}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.15}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.20}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.01}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.69, 1.09]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.33, 0.73]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[-0.03, 0.33]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.02, 0.38]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[-0.22, 0.24]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{7. Medial VIIIb/IX X Early Dorsal}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{10.94}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{3.04}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.88}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.60}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.35}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.40}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.22}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.22}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.75, 1.02]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.47, 0.73]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.25, 0.45]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.30, 0.50]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.05, 0.40]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.04, 0.39]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{8. Medial VIIIb/IX X Late Dorsal}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{12.48}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{3.49}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{1.26}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{1.01}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.75}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.78}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.65}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.65}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.47}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[1.13, 1.40]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.88, 1.15]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.65, 0.85]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.68, 0.88]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.48, 0.83]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.48, 0.82]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.38, 0.56]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{9. VIIb/VIIIa X Early Dorsal}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{11.62}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{3.48}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{1.01}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.76}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.51}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.55}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.40}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.40}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.21}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.25}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.87, 1.15]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.62, 0.89]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.41, 0.61]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.45, 0.65]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.23, 0.58]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.22, 0.57]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.12, 0.30]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.16, 0.34]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{10. VIIb/VIIIa X Late Dorsal}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{12.45}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{2.98}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{1.46}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{1.17}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.79}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.82}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.75}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.75}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.50}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.01}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{0.26}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1800 
+\clvertalc\cellx3024 
+\clvertalc\cellx4248 
+\clvertalc\cellx5688 
+\clvertalc\cellx7128 
+\clvertalc\cellx8568 
+\clvertalc\cellx10008 
+\clvertalc\cellx11448 
+\clvertalc\cellx12888 
+\clvertalc\cellx14328 
+\clvertalc\cellx15768 
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[1.31, 1.60]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[1.04, 1.31]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.69, 0.89]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.71, 0.92]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.57, 0.92]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.57, 0.92]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.41, 0.59]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[-0.08, 0.10]}}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{{\fs20[0.16, 0.35]}}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx1800 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx3024 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx4248 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx5688 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx7128 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx8568 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx10008 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx11448 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx12888 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx14328 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx15768 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx17208 
+\pard\sa0\sb0\intbl\ql{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx428{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx504{ }\cell
+\row
+}
+{\pard \par}{\pard{\i Note.} {\i M} indicates mean. {\i SD} indicates standard deviation. {\i d}-values are estimates calculated using formulas 4.18 and 4.19 from Borenstein, Hedges, Higgins, & Rothstein (2009). {\i d}-values not calculated if unequal variances prevented pooling. Values in square brackets indicate the 95% confidence interval for each {\i d}-value.\par}
+}

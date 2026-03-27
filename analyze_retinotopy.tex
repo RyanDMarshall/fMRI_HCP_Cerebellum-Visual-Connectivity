@@ -1,0 +1,333 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={retinotopic\_cerebellum.Rmd},
+  pdfauthor={Ryan Marshall},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{retinotopic\_cerebellum.Rmd}
+\author{Ryan Marshall}
+\date{2023-05-10}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(gridExtra)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'gridExtra'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:dplyr':
+## 
+##     combine
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# define streams}
+\NormalTok{streams }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}
+  \AttributeTok{dorsal =} \FunctionTok{c}\NormalTok{(}\StringTok{"V1d"}\NormalTok{, }\StringTok{"V2d"}\NormalTok{, }\StringTok{"V3d"}\NormalTok{, }\StringTok{"V3A"}\NormalTok{, }\StringTok{"V3B"}\NormalTok{, }\StringTok{"IPS0"}\NormalTok{, }\StringTok{"IPS1"}\NormalTok{, }\StringTok{"IPS2"}\NormalTok{, }\StringTok{"IPS3"}\NormalTok{, }\StringTok{"IPS4"}\NormalTok{, }\StringTok{"IPS5"}\NormalTok{, }\StringTok{"SPL1"}\NormalTok{, }\StringTok{"FEF"}\NormalTok{),}
+  \AttributeTok{ventral =} \FunctionTok{c}\NormalTok{(}\StringTok{"V1v"}\NormalTok{, }\StringTok{"V2v"}\NormalTok{, }\StringTok{"V3v"}\NormalTok{, }\StringTok{"hV4"}\NormalTok{, }\StringTok{"VO1"}\NormalTok{, }\StringTok{"VO2"}\NormalTok{, }\StringTok{"PHC1"}\NormalTok{, }\StringTok{"PHC2"}\NormalTok{),}
+  \AttributeTok{lateral =} \FunctionTok{c}\NormalTok{(}\StringTok{"LO1"}\NormalTok{, }\StringTok{"LO2"}\NormalTok{, }\StringTok{"TO1"}\NormalTok{, }\StringTok{"TO2"}\NormalTok{)}
+\NormalTok{)}
+
+\NormalTok{streams\_big }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}
+  \AttributeTok{early\_dorsal =} \FunctionTok{c}\NormalTok{(}\StringTok{"V1d"}\NormalTok{,}\StringTok{"V2d"}\NormalTok{,}\StringTok{"V3d"}\NormalTok{),}
+  \AttributeTok{mid\_dorsal =} \FunctionTok{c}\NormalTok{(}\StringTok{"V3A"}\NormalTok{,}\StringTok{"V3B"}\NormalTok{,}\StringTok{"IPS0"}\NormalTok{,}\StringTok{"IPS1"}\NormalTok{,}\StringTok{"IPS2"}\NormalTok{),}
+  \AttributeTok{late\_dorsal =} \FunctionTok{c}\NormalTok{(}\StringTok{"IPS3"}\NormalTok{,}\StringTok{"IPS4"}\NormalTok{,}\StringTok{"FEF"}\NormalTok{),}
+  \AttributeTok{early\_lateral =} \FunctionTok{c}\NormalTok{(}\StringTok{"LO1"}\NormalTok{,}\StringTok{"LO2"}\NormalTok{),}
+  \AttributeTok{late\_lateral =} \FunctionTok{c}\NormalTok{(}\StringTok{"TO1"}\NormalTok{,}\StringTok{"TO2"}\NormalTok{),}
+  \AttributeTok{early\_ventral =} \FunctionTok{c}\NormalTok{(}\StringTok{"V1v"}\NormalTok{, }\StringTok{"V2v"}\NormalTok{, }\StringTok{"V3v"}\NormalTok{),}
+  \AttributeTok{mid\_ventral =} \FunctionTok{c}\NormalTok{(}\StringTok{"hV4"}\NormalTok{,}\StringTok{"VO1"}\NormalTok{,}\StringTok{"VO2"}\NormalTok{),}
+  \AttributeTok{late\_ventral =} \FunctionTok{c}\NormalTok{(}\StringTok{"PHC1"}\NormalTok{,}\StringTok{"PHC2"}\NormalTok{)}
+\NormalTok{)}
+
+\CommentTok{\# Define the color palette}
+\NormalTok{dorsal\_palette }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"\#00BFC4"}\NormalTok{, }\StringTok{"\#00939C"}\NormalTok{, }\StringTok{"\#007377"}\NormalTok{)}
+\NormalTok{ventral\_palette }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"\#F8766D"}\NormalTok{, }\StringTok{"\#C43C35"}\NormalTok{, }\StringTok{"\#7F0000"}\NormalTok{)}
+\NormalTok{lateral\_palette }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"\#FFB85F"}\NormalTok{, }\StringTok{"\#D46F00"}\NormalTok{)}
+\NormalTok{color\_palette\_full }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(dorsal\_palette, ventral\_palette, lateral\_palette)}
+\NormalTok{color\_palette\_small }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"\#00BFC4"}\NormalTok{, }\StringTok{"\#F8766D"}\NormalTok{, }\StringTok{"\#FFB85F"}\NormalTok{)}
+
+
+\DocumentationTok{\#\# Load data}
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{read.csv}\NormalTok{(}\StringTok{"retinotopic\_tstats\_full.csv"}\NormalTok{))}
+\NormalTok{rois }\OtherTok{\textless{}{-}} \FunctionTok{as.list}\NormalTok{(}\FunctionTok{unique}\NormalTok{(df}\SpecialCharTok{$}\NormalTok{roi))}
+\NormalTok{nsub }\OtherTok{=} \DecValTok{166}\NormalTok{; dof }\OtherTok{=}\NormalTok{ nsub }\SpecialCharTok{{-}} \DecValTok{2}\NormalTok{;}
+
+\NormalTok{rois\_reorder }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"V1d"}\NormalTok{, }\StringTok{"V2d"}\NormalTok{, }\StringTok{"V3d"}\NormalTok{, }\StringTok{"V3A"}\NormalTok{, }\StringTok{"V3B"}\NormalTok{, }
+                  \StringTok{"IPS0"}\NormalTok{, }\StringTok{"IPS1"}\NormalTok{, }\StringTok{"IPS2"}\NormalTok{, }\StringTok{"IPS3"}\NormalTok{, }
+                  \StringTok{"IPS4"}\NormalTok{, }\StringTok{"IPS5"}\NormalTok{, }\StringTok{"SPL1"}\NormalTok{, }\StringTok{"FEF"}\NormalTok{, }
+                  \StringTok{"V1v"}\NormalTok{, }\StringTok{"V2v"}\NormalTok{, }\StringTok{"V3v"}\NormalTok{, }\StringTok{"hV4"}\NormalTok{, }
+                  \StringTok{"VO1"}\NormalTok{, }\StringTok{"VO2"}\NormalTok{, }\StringTok{"PHC1"}\NormalTok{, }\StringTok{"PHC2"}\NormalTok{, }
+                  \StringTok{"LO1"}\NormalTok{, }\StringTok{"LO2"}\NormalTok{, }\StringTok{"TO1"}\NormalTok{, }\StringTok{"TO2"}\NormalTok{)}
+\NormalTok{rois\_reorder }\OtherTok{\textless{}{-}}\NormalTok{ rois\_reorder[rois\_reorder}\SpecialCharTok{!=}\FunctionTok{c}\NormalTok{(}\StringTok{"IPS5"}\NormalTok{, }\StringTok{"SPL1"}\NormalTok{)]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in rois_reorder != c("IPS5", "SPL1"): longer object length is not a
+## multiple of shorter object length
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df }\OtherTok{\textless{}{-}}\NormalTok{ df }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(cb\_idx }\SpecialCharTok{!=} \DecValTok{0} \SpecialCharTok{\&}\NormalTok{ roi }\SpecialCharTok{\%in\%}\NormalTok{ rois\_reorder) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{stream =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{    roi }\SpecialCharTok{\%in\%}\NormalTok{ streams}\SpecialCharTok{$}\NormalTok{dorsal }\SpecialCharTok{\textasciitilde{}} \StringTok{"dorsal"}\NormalTok{,}
+\NormalTok{    roi }\SpecialCharTok{\%in\%}\NormalTok{ streams}\SpecialCharTok{$}\NormalTok{ventral }\SpecialCharTok{\textasciitilde{}} \StringTok{"ventral"}\NormalTok{,}
+\NormalTok{    roi }\SpecialCharTok{\%in\%}\NormalTok{ streams}\SpecialCharTok{$}\NormalTok{lateral }\SpecialCharTok{\textasciitilde{}} \StringTok{"lateral"}
+\NormalTok{  )) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{stream =} \FunctionTok{factor}\NormalTok{(stream, }\AttributeTok{levels =} \FunctionTok{c}\NormalTok{(}\StringTok{"dorsal"}\NormalTok{, }\StringTok{"ventral"}\NormalTok{, }\StringTok{"lateral"}\NormalTok{))) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{stream\_depth =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{    roi }\SpecialCharTok{\%in\%}\NormalTok{ streams\_big}\SpecialCharTok{$}\NormalTok{early\_dorsal }\SpecialCharTok{\textasciitilde{}} \StringTok{"early\_dorsal"}\NormalTok{,}
+\NormalTok{    roi }\SpecialCharTok{\%in\%}\NormalTok{ streams\_big}\SpecialCharTok{$}\NormalTok{mid\_dorsal }\SpecialCharTok{\textasciitilde{}} \StringTok{"mid\_dorsal"}\NormalTok{,}
+\NormalTok{    roi }\SpecialCharTok{\%in\%}\NormalTok{ streams\_big}\SpecialCharTok{$}\NormalTok{late\_dorsal }\SpecialCharTok{\textasciitilde{}} \StringTok{"late\_dorsal"}\NormalTok{,}
+\NormalTok{    roi }\SpecialCharTok{\%in\%}\NormalTok{ streams\_big}\SpecialCharTok{$}\NormalTok{early\_lateral }\SpecialCharTok{\textasciitilde{}} \StringTok{"early\_lateral"}\NormalTok{,}
+\NormalTok{    roi }\SpecialCharTok{\%in\%}\NormalTok{ streams\_big}\SpecialCharTok{$}\NormalTok{late\_lateral }\SpecialCharTok{\textasciitilde{}} \StringTok{"late\_lateral"}\NormalTok{,}
+\NormalTok{    roi }\SpecialCharTok{\%in\%}\NormalTok{ streams\_big}\SpecialCharTok{$}\NormalTok{early\_ventral }\SpecialCharTok{\textasciitilde{}} \StringTok{"early\_ventral"}\NormalTok{,}
+\NormalTok{    roi }\SpecialCharTok{\%in\%}\NormalTok{ streams\_big}\SpecialCharTok{$}\NormalTok{mid\_ventral }\SpecialCharTok{\textasciitilde{}} \StringTok{"mid\_ventral"}\NormalTok{,}
+\NormalTok{    roi }\SpecialCharTok{\%in\%}\NormalTok{ streams\_big}\SpecialCharTok{$}\NormalTok{late\_ventral }\SpecialCharTok{\textasciitilde{}} \StringTok{"late\_ventral"}
+\NormalTok{  )) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{stream\_depth =} \FunctionTok{factor}\NormalTok{(stream\_depth, }\AttributeTok{levels =} \FunctionTok{c}\NormalTok{(}\StringTok{"early\_dorsal"}\NormalTok{, }\StringTok{"mid\_dorsal"}\NormalTok{, }\StringTok{"late\_dorsal"}\NormalTok{, }\StringTok{"early\_ventral"}\NormalTok{, }\StringTok{"mid\_ventral"}\NormalTok{, }\StringTok{"late\_ventral"}\NormalTok{,}\StringTok{"early\_lateral"}\NormalTok{,}\StringTok{"late\_lateral"}\NormalTok{)))}
+  
+\NormalTok{cb\_roi\_full\_map }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}\StringTok{"R\_lat\_VIIIb/IX"}\NormalTok{,}\StringTok{"R\_med\_VIIIb/IX"}\NormalTok{,}\StringTok{"L\_med\_VIIIb/IX"}\NormalTok{,}\StringTok{"L\_lat\_VIIIb/IX"}\NormalTok{,}\StringTok{"L\_VIIb/VIIIa"}\NormalTok{,}\StringTok{"R\_VIIb/VIIIa"}\NormalTok{,}\StringTok{"L\_med\_OMV"}\NormalTok{,}\StringTok{"L\_lat\_OMV"}\NormalTok{,}\StringTok{"R\_med\_OMV"}\NormalTok{,}\StringTok{"R\_lat\_OMV"}\NormalTok{ )}
+
+\NormalTok{cb\_roi\_full\_reorder }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}\StringTok{"L\_lat\_VIIIb/IX"}\NormalTok{,}\StringTok{"L\_med\_VIIIb/IX"}\NormalTok{,}\StringTok{"L\_VIIb/VIIIa"}\NormalTok{,}\StringTok{"L\_lat\_OMV"}\NormalTok{,}\StringTok{"L\_med\_OMV"}\NormalTok{,}\StringTok{"R\_med\_OMV"}\NormalTok{,}\StringTok{"R\_lat\_OMV"}\NormalTok{,}\StringTok{"R\_VIIb/VIIIa"}\NormalTok{,}\StringTok{"R\_med\_VIIIb/IX"}\NormalTok{,}\StringTok{"R\_lat\_VIIIb/IX"}\NormalTok{ )}
+\NormalTok{cb\_roi\_full\_reorder\_RL }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}\StringTok{"L\_med\_OMV"}\NormalTok{,}\StringTok{"R\_med\_OMV"}\NormalTok{,}\StringTok{"L\_lat\_OMV"}\NormalTok{,}\StringTok{"R\_lat\_OMV"}\NormalTok{,}\StringTok{"L\_VIIb/VIIIa"}\NormalTok{,}\StringTok{"R\_VIIb/VIIIa"}\NormalTok{,}\StringTok{"L\_med\_VIIIb/IX"}\NormalTok{,}\StringTok{"R\_med\_VIIIb/IX"}\NormalTok{,}\StringTok{"L\_lat\_VIIIb/IX"}\NormalTok{,}\StringTok{"R\_lat\_VIIIb/IX"}\NormalTok{ )}
+\NormalTok{cb\_roi\_full\_reorder\_bh }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}\StringTok{"med\_OMV"}\NormalTok{,}\StringTok{"lat\_OMV"}\NormalTok{,}\StringTok{"VIIb/VIIIa"}\NormalTok{,}\StringTok{"med\_VIIIb/IX"}\NormalTok{,}\StringTok{"lat\_VIIIb/IX"}\NormalTok{)}
+
+\CommentTok{\# define mapping for cb\_roi and cb\_hemi}
+\NormalTok{cb\_roi\_map }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"lat\_VIIIb/IX"}\NormalTok{,}\StringTok{"med\_VIIIb/IX"}\NormalTok{,}\StringTok{"med\_VIIIb/IX"}\NormalTok{,}\StringTok{"lat\_VIIIb/IX"}\NormalTok{,}\StringTok{"VIIb/VIIIa"}\NormalTok{,}\StringTok{"VIIb/VIIIa"}\NormalTok{,}\StringTok{"med\_OMV"}\NormalTok{,}\StringTok{"lat\_OMV"}\NormalTok{,}\StringTok{"med\_OMV"}\NormalTok{,}\StringTok{"lat\_OMV"}\NormalTok{)}
+\NormalTok{cb\_hemi\_map }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"R"}\NormalTok{,}\StringTok{"R"}\NormalTok{,}\StringTok{"L"}\NormalTok{, }\StringTok{"L"}\NormalTok{, }\StringTok{"L"}\NormalTok{, }\StringTok{"R"}\NormalTok{, }\StringTok{"L"}\NormalTok{, }\StringTok{"L"}\NormalTok{, }\StringTok{"R"}\NormalTok{, }\StringTok{"R"}\NormalTok{)}
+
+\NormalTok{df}\SpecialCharTok{$}\NormalTok{cb\_roi\_full }\OtherTok{\textless{}{-}}\NormalTok{ cb\_roi\_full\_map[df}\SpecialCharTok{$}\NormalTok{cb\_idx]}
+\NormalTok{df}\SpecialCharTok{$}\NormalTok{cb\_roi }\OtherTok{\textless{}{-}}\NormalTok{ cb\_roi\_map[df}\SpecialCharTok{$}\NormalTok{cb\_idx]}
+\NormalTok{df}\SpecialCharTok{$}\NormalTok{cb\_hemi }\OtherTok{\textless{}{-}}\NormalTok{ cb\_hemi\_map[df}\SpecialCharTok{$}\NormalTok{cb\_idx]}
+
+\NormalTok{bh\_pear\_df }\OtherTok{\textless{}{-}}\NormalTok{ df }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(hemi }\SpecialCharTok{==} \StringTok{"bilat"} \SpecialCharTok{\&}\NormalTok{ corrtype }\SpecialCharTok{==} \StringTok{"pearson"}\NormalTok{)}
+\NormalTok{lh\_pear\_df }\OtherTok{\textless{}{-}}\NormalTok{ df }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(hemi }\SpecialCharTok{==} \StringTok{"lh"} \SpecialCharTok{\&}\NormalTok{ corrtype }\SpecialCharTok{==} \StringTok{"pearson"}\NormalTok{)}
+\NormalTok{lhrh\_pear\_df }\OtherTok{\textless{}{-}}\NormalTok{ df }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(hemi }\SpecialCharTok{!=} \StringTok{"bilat"} \SpecialCharTok{\&}\NormalTok{ corrtype }\SpecialCharTok{==} \StringTok{"pearson"}\NormalTok{)}
+\NormalTok{rh\_pear\_df }\OtherTok{\textless{}{-}}\NormalTok{ df }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(hemi }\SpecialCharTok{==} \StringTok{"rh"} \SpecialCharTok{\&}\NormalTok{ corrtype }\SpecialCharTok{==} \StringTok{"pearson"}\NormalTok{)}
+\NormalTok{lhrh\_pear\_diff }\OtherTok{\textless{}{-}}\NormalTok{ lh\_pear\_df }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(roi,stream,stream\_depth,corrtype)}
+\NormalTok{lhrh\_pear\_diff}\SpecialCharTok{$}\NormalTok{tdiff }\OtherTok{\textless{}{-}}\NormalTok{ lh\_pear\_df}\SpecialCharTok{$}\NormalTok{t }\SpecialCharTok{{-}}\NormalTok{ rh\_pear\_df}\SpecialCharTok{$}\NormalTok{t}
+
+\NormalTok{lh\_part\_df }\OtherTok{\textless{}{-}}\NormalTok{ df }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(hemi }\SpecialCharTok{==} \StringTok{"lh"} \SpecialCharTok{\&}\NormalTok{ corrtype }\SpecialCharTok{==} \StringTok{"partial"}\NormalTok{)}
+\NormalTok{rh\_part\_df }\OtherTok{\textless{}{-}}\NormalTok{ df }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(hemi }\SpecialCharTok{==} \StringTok{"rh"} \SpecialCharTok{\&}\NormalTok{ corrtype }\SpecialCharTok{==} \StringTok{"partial"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{create-t-boxplots-for-each-roi-averaged-across-cb_roi-and-grouped-by-stream_depth}{%
+\section{Create t boxplots for each ROI averaged across cb\_roi and
+grouped by
+stream\_depth}\label{create-t-boxplots-for-each-roi-averaged-across-cb_roi-and-grouped-by-stream_depth}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{bh\_pear\_df }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(roi, stream\_depth) }\SpecialCharTok{\%\textgreater{}\%}
+\CommentTok{\# Plot data}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{factor}\NormalTok{(roi, }\AttributeTok{levels =}\NormalTok{ rois\_reorder), }\AttributeTok{y =}\NormalTok{ t, }\AttributeTok{fill=}\NormalTok{ stream\_depth), }\AttributeTok{fill =}\NormalTok{ stream\_depth) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{facet\_grid}\NormalTok{(}\AttributeTok{scales =} \StringTok{"fixed"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{guide =} \FunctionTok{guide\_axis}\NormalTok{(}\AttributeTok{n.dodge =} \DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"bilat pearson t values across retinotopic cerebellar seeds"}\NormalTok{),}
+       \AttributeTok{x =} \StringTok{"ROI"}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{"T value"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values=}\NormalTok{color\_palette\_full)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analyze_retinotopy_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Create t boxplots for each bilateral cerebellar retinotopic seeds, also grouped by stream\_depth}
+\NormalTok{bh\_pear\_df }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(roi, stream\_depth) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\# Plot data}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{factor}\NormalTok{(cb\_roi, }\AttributeTok{levels =}\NormalTok{ cb\_roi\_full\_reorder\_bh), }\AttributeTok{y =}\NormalTok{ t, }\AttributeTok{fill =}\NormalTok{ stream\_depth)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{facet\_grid}\NormalTok{(}\AttributeTok{scales =} \StringTok{"fixed"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{guide =} \FunctionTok{guide\_axis}\NormalTok{(}\AttributeTok{n.dodge =} \DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"bilat pearson t values across retinotopic cerebellar seeds"}\NormalTok{),}
+       \AttributeTok{x =} \StringTok{"ROI"}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{"T value"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values=}\NormalTok{color\_palette\_full)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analyze_retinotopy_files/figure-latex/unnamed-chunk-2-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Create same boxplots but converted to correlation values from t statistic}
+\NormalTok{bh\_pear\_df }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{r =} \FunctionTok{sqrt}\NormalTok{(t}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{/}\NormalTok{ (t}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{+}\NormalTok{ dof))) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(roi, stream\_depth) }\SpecialCharTok{\%\textgreater{}\%}
+\CommentTok{\# Plot data}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{factor}\NormalTok{(roi, }\AttributeTok{levels =}\NormalTok{ rois\_reorder), }\AttributeTok{y =}\NormalTok{ r, }\AttributeTok{fill=}\NormalTok{ stream\_depth), }\AttributeTok{fill =}\NormalTok{ stream\_depth) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{facet\_grid}\NormalTok{(}\AttributeTok{scales =} \StringTok{"fixed"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{guide =} \FunctionTok{guide\_axis}\NormalTok{(}\AttributeTok{n.dodge =} \DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{limits =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{), }\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{,.}\DecValTok{1}\NormalTok{)) }\SpecialCharTok{+} 
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"bilat pearson r values by cortical ROI"}\NormalTok{),}
+       \AttributeTok{x =} \StringTok{"ROI"}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{"Effect size r"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values=}\NormalTok{color\_palette\_full)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analyze_retinotopy_files/figure-latex/unnamed-chunk-2-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Filter and group data}
+\NormalTok{bh\_pear\_df }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{r =} \FunctionTok{sqrt}\NormalTok{(t}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{/}\NormalTok{ (t}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{+}\NormalTok{ dof))) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(roi, stream\_depth) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\# Plot data}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{factor}\NormalTok{(cb\_roi, }\AttributeTok{levels =}\NormalTok{ cb\_roi\_full\_reorder\_bh), }\AttributeTok{y =}\NormalTok{ r, }\AttributeTok{fill =}\NormalTok{ stream\_depth)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{facet\_grid}\NormalTok{(}\AttributeTok{scales =} \StringTok{"fixed"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}\AttributeTok{guide =} \FunctionTok{guide\_axis}\NormalTok{(}\AttributeTok{n.dodge =} \DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{limits =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{), }\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{,.}\DecValTok{1}\NormalTok{)) }\SpecialCharTok{+} 
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"bilat pearson r values by retinotopic cerebellar ROI"}\NormalTok{),}
+       \AttributeTok{x =} \StringTok{"ROI"}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{"Effect size (r)"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values=}\NormalTok{color\_palette\_full)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{analyze_retinotopy_files/figure-latex/unnamed-chunk-2-4.pdf}
+
+\end{document}

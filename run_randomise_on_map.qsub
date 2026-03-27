@@ -1,0 +1,64 @@
+#!/bin/bash -l
+
+############################ BASH_EXAMPLE.QSUB #############################
+###                                                                      ###
+### This script serves as an instructional template to submitting jobs   ###
+### on the SCC.                                                          ### 
+###                                                                      ###
+### To specify a qsub option, include the '#$' infront of the option:    ###
+### Example: #$ -P my_scc_project                                        ###
+###                                                                      ###
+### Shell script commands can be included without any special methods    ###
+### Example: module load matlab/2018a                                    ###
+###                                                                      ###
+### qsub scripts can take arguments to your script from the terminal:    ### 
+### Example: arg1=$1                                                     ###
+### The $1 represents the first input after the script in the terminal   ###
+###                                                                      ###
+### To configure this script for your job, change 'my_script.sh' to your ###
+### script and change the settings in this script  to fit your job.      ###
+### More settings can be found in 'Running Jobs' at https://rcs.bu.edu   ###
+###                                                                      ###
+### usage:                                                               ###
+###                                                                      ###
+### [userid@scc1.bu.edu:~] qsub batch_example.qsub my_arg1 my_arg2       ###
+###                                                                      ###
+### Contact BU RCS for any questions: help@rcs.bu.edu                    ###
+###                                                                      ###
+###########################################################################
+
+# Set SCC project
+#$ -P somerslab
+
+# Give job a name
+
+# Specify hard time limit for the job. 
+#   The job will be aborted if it runs longer than this time.
+#   The default time is 12 hours
+#$ -l h_rt=12:00:00
+
+# Request a node with minimum X GB of memory per N core
+# -l mem_per_core=XG
+#$ -pe omp 1
+
+# Combine output and error files into a single file
+#$ -j y
+
+# Send an email when the job finishes or if it is aborted (by default no email is sent).
+#$ -m ea
+
+# Specify dir for output files
+#$ -o .
+
+# Load desired modules
+module load fsl/6.0.1
+
+# Keep track of information related to the current job
+echo "=========================================================="
+echo "Start date : $(date)"
+echo "Job name : $JOB_NAME"
+echo "Job ID : $JOB_ID  $subjid"
+echo "Task ID : $SGE_TASK_ID"
+echo "=========================================================="
+
+

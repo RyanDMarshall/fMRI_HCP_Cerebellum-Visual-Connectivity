@@ -1,0 +1,150 @@
+{\rtf1\ansi\deff0 {\fonttbl {\f0 Times New Roman;}}
+\paperw15840 \paperh12240 \margl1440 \margr1440 \margt1440 \margb1440 \landscape 
+{\pard Table 13 \par}
+{\pard  \par}
+{\pard\i Means and standard deviations for t as a function of a 2(CTX_Depth) X 5(CB_ROI) design\par}
+{\pard  \par}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx1835 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx14076 
+\pard\sa100\sb100\intbl\qr{ }\cell
+\pard\sa100\sb100\intbl\qc{CB_ROI}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clvertalc\cellx1835 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx4284 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx6732 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx9180 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx11628 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx14076 
+\pard\sa100\sb100\intbl\qr{ }\cell
+\pard\sa100\sb100\intbl\qc{Lateral OMV}\cell
+\pard\sa100\sb100\intbl\qc{Lateral VIIIb/IX}\cell
+\pard\sa100\sb100\intbl\qc{Medial OMV}\cell
+\pard\sa100\sb100\intbl\qc{Medial VIIIb/IX}\cell
+\pard\sa100\sb100\intbl\qc{VIIb/VIIIa}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx1835 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx3060 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx4284 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5508 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx6732 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx7956 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx9180 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx10404 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx11628 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx12852 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx14076 
+\pard\sa100\sb100\intbl\qr{CTX_Depth}\cell
+\pard\sa100\sb100\intbl\qc{{\i M}}\cell
+\pard\sa100\sb100\intbl\qc{{\i SD}}\cell
+\pard\sa100\sb100\intbl\qc{{\i M}}\cell
+\pard\sa100\sb100\intbl\qc{{\i SD}}\cell
+\pard\sa100\sb100\intbl\qc{{\i M}}\cell
+\pard\sa100\sb100\intbl\qc{{\i SD}}\cell
+\pard\sa100\sb100\intbl\qc{{\i M}}\cell
+\pard\sa100\sb100\intbl\qc{{\i SD}}\cell
+\pard\sa100\sb100\intbl\qc{{\i M}}\cell
+\pard\sa100\sb100\intbl\qc{{\i SD}}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx1835 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx3060 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx4284 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5508 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx6732 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx7956 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx9180 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx10404 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx11628 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx12852 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx14076 
+\pard\sa100\sb100\intbl\qr{Early Lateral}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{9.13}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{2.28}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{8.91}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{3.62}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{10.07}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{2.16}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{11.04}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{3.30}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{13.00}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{3.74}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx1835 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx3060 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx4284 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx5508 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx6732 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx7956 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx9180 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx10404 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx11628 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx12852 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx14076 
+\pard\sa100\sb100\intbl\qr{Late Lateral}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{6.60}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{1.70}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{6.26}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{4.92}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{6.59}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{1.77}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{9.45}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{2.39}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{10.85}\cell
+\pard\sa100\sb100\intbl\tqdec\tldot\tx428{3.00}\cell
+\row
+}
+{\pard \par}{\pard{\i Note.} {\i M} and {\i SD} represent mean and standard deviation, respectively.\par}
+}

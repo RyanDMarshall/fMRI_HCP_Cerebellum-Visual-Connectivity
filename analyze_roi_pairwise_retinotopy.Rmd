@@ -1,0 +1,84 @@
+---
+title: "analyze_retinotopy_pairwise"
+author: "Ryan Marshall"
+date: '2023-07-05'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+library(reticulate)
+
+work_dir <- "/projectnb/somerslab/ryanmars/projects/CrossTaskAnalysis/proj_allrest/results/group/HCP_SUIT"
+setwd(work_dir)
+
+# define streams
+streams <- list(
+  dorsal = c("V1d", "V2d", "V3d", "V3A", "V3B", "IPS0", "IPS1", "IPS2", "IPS3", "IPS4", "IPS5", "SPL1", "FEF"),
+  ventral = c("V1v", "V2v", "V3v", "hV4", "VO1", "VO2", "PHC1", "PHC2"),
+  lateral = c("LO1", "LO2", "TO1", "TO2")
+)
+
+streams_big <- list(
+  early_dorsal = c("V1d","V2d","V3d"),
+  mid_dorsal = c("V3A","V3B","IPS0","IPS1","IPS2"),
+  late_dorsal = c("IPS3","IPS4","FEF"),
+  early_lateral = c("LO1","LO2"),
+  late_lateral = c("TO1","TO2"),
+  early_ventral = c("V1v", "V2v", "V3v"),
+  mid_ventral = c("hV4","VO1","VO2"),
+  late_ventral = c("PHC1","PHC2")
+)
+
+# Define the color palette
+dorsal_palette <- c("#00BFC4", "#00939C", "#007377")
+ventral_palette <- c("#F8766D", "#C43C35", "#7F0000")
+lateral_palette <- c("#FFB85F", "#D46F00")
+color_palette_full <- c(dorsal_palette, ventral_palette, lateral_palette)
+color_palette_small <- c("#00BFC4", "#F8766D", "#FFB85F")
+color_palette_by_roi <- c("#00CED1", "#00BFC4", "#00A5AA", "#00939C", "#00878B", "#007377", "#006E72", "#005A5F", "#005A5F", "#004749", "#003535", "#FF7258", "#F8766D", "#E64C46", "#C43C35", "#BF1D19", "#8F0000", "#7F0000", "#5F0000", "#FFB85F", "#FF944C", "#D46F00", "#D46F00")
+
+```
+
+```{r}
+## Load paired tstat csv output
+header = c("ReferenceROI", "ROI1", "ROI2", "tstat", "pval")
+df_by_ctx_roi <- as.data.frame(read.csv('paired_cb_tstats_by_cortical_roi.csv', col.names = header))
+df_by_cb_roi <- as.data.frame(read.csv('paired_ctx_tstats_by_cerebellar_roi.csv', col.names = header))
+```
+
+```{r}
+packages=c("os","csv","math","itertools","nibabel","numpy","pandas","scipy","matplotlib","pathlib")
+for (pkg in packages) {
+  if (!py_module_available(pkg)) {
+    message(sprintf("Installing missing Python package: %s", pkg))
+    py_install(pkg, pip = TRUE)  # Installs into system/default env
+  } else {
+    message(sprintf("Python package '%s' is already installed.", pkg))
+  }
+}
+
+## Load data and correlations via python
+source_python("analyze_roi-to-roi_retinotopy.py")
+
+```
+
+
+```{r}
+# Between dorsal/ventral stream comparison
+aov_ed_vs_ev <- aov(t ~ cb_roi*stream_depth, data=df_sub %>% filter(stream_depth %in% c("early_dorsal","early_ventral")))
+aov_md_vs_mv <- aov(t ~ cb_roi*stream_depth, data=df_sub %>% filter(stream_depth %in% c("mid_dorsal","mid_ventral")))
+aov_ld_vs_lv <- aov(t ~ cb_roi*stream_depth, data=df_sub %>% filter(stream_depth %in% c("late_dorsal","late_ventral")))
+
+# Within-stream connectivity profile progression
+aov_ld_vs_ed <- aov(t ~ cb_roi*stream_depth, data=df_sub %>% filter(stream_depth %in% c("early_dorsal","late_dorsal")))
+aov_ll_vs_el <- aov(t ~ cb_roi*stream_depth, data=df_sub %>% filter(stream_depth %in% c("early_lateral","late_lateral")))
+aov_lv_vs_ev <- aov(t ~ cb_roi*stream_depth, data=df_sub %>% filter(stream_depth %in% c("early_ventral","late_ventral")))
+```

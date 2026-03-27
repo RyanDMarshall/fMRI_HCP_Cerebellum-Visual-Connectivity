@@ -1,0 +1,117 @@
+import os
+import csv
+import itertools
+import nibabel as nb
+import numpy as np
+import pandas as pd
+import scipy as sp
+import matplotlib.pyplot as plt
+from scipy.cluster.hierarchy import linkage, dendrogram
+from pathlib import Path
+
+proj_dir = f'projectnb/somerslab/ryanmars/projects/CrossTaskAnalysis/proj_allrest/results/group/HCP_SUIT'
+atlas_dir = f'projectnb/somerslab/ryanmars/atlases'
+
+ctx_atlas_fn = f'/projectnb/somerslab/ryanmars/projects/CrossTaskAnalysis/proj_allrest/results/group/HCP_SUIT/rois-sorted.txt'
+ctx_atlas = np.loadtxt(ctx_atlas_fn,dtype=str)
+
+cb_labels_fn = f'/{atlas_dir}/cerebellum/vanEsRetinotopy/cerebellum_retmaps.csv'
+cb_ret_labels = np.loadtxt(cb_labels_fn, dtype=str, delimiter=',')
+cb_ret_vals = np.unique(cb_ret_labels[:,1])
+cb_ret_keys = [int(x) for x in np.unique(cb_ret_labels[:,0])]
+
+cb_atlas_fn = f'/{atlas_dir}/cerebellum/vanEsRetinotopy/cerebellum_retmaps.nii'
+cb_atlas = nb.load(cb_atlas_fn)
+cb_atlas_nii = nb.load(cb_atlas_fn)
+cb_atlas_fd = cb_atlas_nii.get_fdata()
+
+roi='FEF'
+hemi='lh'
+hemis = ["lh", "rh"]
+corrtype='partial'
+
+example_subs_map_fn = f'/{proj_dir}/{roi}/perms-{corrtype}_unthresholded_fisherz/allsubjects_{roi}.{hemi}.fisherz.SUIT.dscalar.nii'
+example_group_map_fn = f'/{proj_dir}/{roi}/perms-{corrtype}_unthresholded_fisherz/perm_vsm4_{roi}_{hemi}_{corrtype}_tstat1.nii.gz'
+example_subs_map = nb.load(example_subs_map_fn)
+example_group_map = nb.load(example_group_map_fn)
+
+example_subs_map_fd = example_subs_map.get_fdata()
+example_sub_map = example_subs_map_fd[:,:,:,0]
+
+n_ctx_rois = np.size(ctx_atlas); n_cb_rois = np.size(cb_ret_vals);
+n_subs = np.shape(example_subs_map_fd)[3]
+
+corrs_cb_by_roi = np.zeros(shape = (n_ctx_rois, n_ctx_rois, 2));
+mean_corrs_bysub = np.zeros(shape = (n_subs, n_ctx_rois, n_cb_rois, 2));
+mean_tstats_bygroup = np.zeros(shape = (n_ctx_rois, n_cb_rois, 2));
+mean_zvals_bygroup = np.zeros(shape = (n_ctx_rois, n_cb_rois, 2))
+mean_pvals_bygroup = np.zeros(shape = (n_ctx_rois, n_cb_rois, 2))
+
+## Bilateral pearson averages, mean_corrs = 166 x 25 x 10 x 2 (n_subs x n_ctx_rois x n_cb_rois x n_hemis)
+## Group whole-cerebellum correlations
+for hemi_i in range(0,2):
+	for roi_i in range(0,n_ctx_rois):
+		hemi = hemis[hemi_i]
+		roi = ctx_atlas[roi_i]
+		roi_subs_fn = f'/{proj_dir}/{roi}/perms-{corrtype}_unthresholded_fisherz/allsubjects_{roi}.{hemi}.fisherz.SUIT.dscalar.nii'
+		roi_subs_fisherz = nb.load(roi_subs_fn)
+		roi_subs_fisherz_fd = roi_subs_fisherz.get_fdata()
+	
+		roi_group_pval_fn = f'/{proj_dir}/{roi}/perms-{corrtype}_unthresholded_fisherz/perm_vsm4_{roi}_{hemi}_{corrtype}_tfce_corrp_tstat1.nii.gz'
+		roi_group_pval = nb.load(roi_group_pval_fn)
+		roi_group_pval_fd = roi_group_pval.get_fdata()
+
+		roi_group_tstat_fn = f'/{proj_dir}/{roi}/perms-{corrtype}_unthresholded_fisherz/perm_vsm4_{roi}_{hemi}_{corrtype}_tstat1.nii.gz'
+		roi_group_tstat = nb.load(roi_group_tstat_fn)
+		roi_group_tstat_fd = roi_group_tstat.get_fdata()
+
+		# group analysis
+		for cb_roi_i in range(0,n_cb_rois):
+			cb_roi_idx = cb_ret_keys[cb_roi_i]
+			cb_roi_label = cb_ret_vals[cb_roi_i]
+
+			cb_roi_group_map = roi_group_tstat_fd[cb_atlas_fd==cb_roi_idx]
+			mean_tstats_bygroup[roi_i,cb_roi_i,hemi_i] = np.mean(cb_roi_group_map)
+
+			cb_roi_pvals = 1 - roi_group_pval_fd[cb_atlas_fd==cb_roi_idx] # TFCE output is 1 - p value
+			cb_roi_zvals = sp.stats.norm.ppf(1 - cb_roi_pvals / 2)
+			cb_roi_mean_zval = np.mean(cb_roi_zvals)
+			mean_pvals_bygroup[roi_i,cb_roi_i,hemi_i] = 2 * (1 - sp.stats.norm.cdf(abs(cb_roi_mean_zval)))
+
+			# subs analysis
+			for sub_i in range(0,n_subs):
+				sub_map = roi_subs_fisherz_fd[:,:,:,sub_i]
+				cb_roi_sub_map = sub_map[cb_atlas_fd==cb_roi_idx]
+				mean_corrs_bysub[sub_i,roi_i,cb_roi_i,hemi_i] = np.mean(cb_roi_sub_map)
+
+		for roi_j in range(0,n_ctx_rois):
+			roi2 = ctx_atlas[roi_j]
+			roi2_group_fn = f'/{proj_dir}/{roi2}/perms-{corrtype}_unthresholded_fisherz/perm_vsm4_{roi2}_{hemi}_{corrtype}_tstat1.nii.gz'
+			roi2_group_tstat = nb.load(roi2_group_fn)
+			roi2_group_tstat_fd = roi2_group_tstat.get_fdata()
+
+			corrs_cb_by_roi[roi_i,roi_j,hemi_i] = np.corrcoef(np.ndarray.flatten(roi_group_tstat_fd), np.ndarray.flatten(roi2_group_tstat_fd))[0,1]
+
+
+angles = np.linspace(0, 2 * np.pi, len(connectivity), endpoint=False).tolist()
+
+fig, axes = plt.subplots(nrows=1, ncols=5, subplot_kw={'polar': True})
+for i in range(5):
+	for j in range(2):
+	
+		connectivity = -np.log10(mean_pvals_bygroup[:,:,J])
+		cb_roi = str(cb_ret_vals[i]).replace("left_","").replace("right_","")
+		connectivity_lh = connectivity[:,i]
+		connectivity_rh = connectivity[:,i+5]
+		# Plot the rose diagram
+		ax = axes[i]
+		ax.plot(angles, connectivity_lh, marker='o', color='green')
+		ax.plot(angles, connectivity_rh, marker='o', color='red')
+
+		# Set the labels and title
+		ax.set_xticks(angles)
+		ax.set_xticklabels(ctx_atlas)
+		ax.set_yticks([0.0, 1.0, 2.0, 3.0, 4.0])  # Customize the y-axis ticks as needed
+		ax.set_xlabel('-log10(p)')
+		ax.set_title(cb_roi)
+plt.show()
