@@ -11,4 +11,4 @@ An additional secondary analysis investigated visual connectivity lateralization
 
 Further analyses investigated systematic differences in connectivity profiles across each of the dorsal, ventral, and lateral visual streams.
 
-If you have questions, please contact ryanmarshall@fas.harvard.edu for more information.
+If you have questions, please contact ryanmarshall@fas.harvard.edu for more information. This code was used to generate a chapter of my dissertation (not necessarily built for direct public use!)
